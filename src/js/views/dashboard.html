@@ -1,0 +1,24 @@
+<!--
+ Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+-->
+<div class="oj-hybrid-padding">
+    <div>
+        <!-- ko foreach: customers --> 
+        <input data-bind="ojComponent: {
+		    component: 'ojSlider', 
+		    max:max,
+		    min:min, 
+		    step:step, 
+		    value:value
+		    }"/>
+        <span id="value" data-bind="text: value"></span>
+        <br/><br/>
+        <!-- /ko -->
+        <button id="bt1" data-bind="click: getSliderValues,
+                                    ojComponent: {
+                                        component:'ojButton',
+                                        label: 'Submit'
+                                    }"/>
+    </div>
+</div>
